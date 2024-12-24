@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-input,
+  .form-textarea,
+  .form-select {
+    @apply w-full rounded-lg border-gray-200 bg-white px-4 py-3 text-gray-700 shadow-sm transition duration-150 ease-in-out;
+    @apply focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;
+    @apply hover:border-gray-300;
+    @apply placeholder:text-gray-400;
+  }
+
+  .form-select {
+    @apply pr-10;
+  }
+
+  .form-textarea {
+    @apply min-h-[100px] resize-y;
+  }
+}
