@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { format } from 'date-fns';
 import { X } from 'lucide-react';
+import TaskComments from './TaskComments';
 
 interface Task {
   id: string;
@@ -102,6 +103,9 @@ const TaskCard: React.FC<TaskCardProps> = ({
             </div>
             <p className="mt-2 text-gray-900">{task.text}</p>
             {renderContent()}
+            
+            {/* Comments Section */}
+            <TaskComments taskId={task.id} />
           </div>
         </div>
       </div>
